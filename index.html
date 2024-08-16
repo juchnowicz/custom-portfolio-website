@@ -1,0 +1,129 @@
+<!--  <meta name="author" content="Marcin Juchnowicz"> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: row; /* Default layout: sidebar on the left, content on the right */
+            min-height: 100vh;
+            margin: 0;
+            padding-right: 0px; /* Padding only on the right side */
+            box-sizing: border-box;
+        }
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 20px 20px 50px; /* Adds padding on the left side */
+            width: 600px; /* Controls the width of the sidebar */
+            position: fixed;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        .sidebar h2 {
+            text-align: center; /* Center-align the "My Portfolio" header */
+        }
+        .content {
+            margin-left: 650px; /* Adjusted based on new sidebar width + margin */
+            padding-right: 50px; /* Adds padding on the right side */
+            padding-left: 50px; /* Adds padding on the left side */
+            flex-grow: 1;
+        }
+        .nav-section {
+            margin-bottom: 40px;
+        }
+        .nav-pills .nav-link {
+            background-color: transparent; /* Make nav-pills transparent */
+            color: #343a40; /* Text color matching the sidebar background */
+            border-radius: 0; /* Remove border radius for a flat look */
+        }
+        .nav-pills .nav-link.active {
+            background-color: #343a40; /* Active link color matching sidebar */
+            color: white; /* Active link text color */
+        }
+        .about-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .about-section img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        /* Media Query: Adjust layout for small screens */
+        @media (max-width: 992px) {
+            body {
+                flex-direction: column; /* Stack sidebar on top of the content */
+            }
+            .sidebar {
+                width: 100%; /* Sidebar takes full width */
+                position: relative;
+                height: auto;
+                margin-bottom: 20px; /* Adds space between sidebar and content */
+            }
+            .content {
+                margin-left: 0; /* No margin-left needed */
+                padding-right: 20px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>My Portfolio</h2>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navigation Section -->
+        <div class="nav-section">
+            <ul class="nav nav-pills justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <h1>About</h1>
+            <img src="images/about/1.jpg" alt="Your Photo">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet dolor dolor. 
+                Suspendisse ligula elit, hendrerit ut bibendum quis, facilisis vitae est. Vivamus vitae 
+                felis sit amet sem rhoncus euismod. Praesent sem dolor, ullamcorper nec tempor quis, 
+                pulvinar sed dolor. Quisque pretium felis ac nisi posuere, id commodo lorem porttitor. 
+                Nam in condimentum ex. Nam accumsan nisl turpis, sed tempus dolor volutpat non. Proin id 
+                enim feugiat ipsum consectetur mattis. Nam blandit venenatis nisi, convallis imperdiet 
+                nisi condimentum at.
+            </p>
+            <p>
+                Duis convallis ligula sed pretium tristique. Duis nunc risus, lacinia eget cursus id, 
+                suscipit ac metus. Sed varius sed tortor congue aliquam. In in dapibus diam, in auctor 
+                purus. Praesent vitae tristique diam. Donec tincidunt hendrerit tortor, vitae lobortis 
+                purus rutrum sit amet. Nunc non arcu vitae leo rhoncus tincidunt vel sed urna. Sed sed 
+                efficitur dui. Morbi id velit nisi. Fusce luctus placerat purus eu cursus.
+            </p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
